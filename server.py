@@ -11,7 +11,7 @@ def get_data():
     sum = 0
     for data in ping_data:
         key, value = data.split(": ")
-        new_value = value.replace("ms","").strip()
+        new_value = value.replace("ms","")
         sum+=int(new_value)
     average_latency = round(sum / len(ping_data), 2)
 
