@@ -1,5 +1,4 @@
 import os
-import shutil
 import time
 
 source_dir = "/mnt/c/Users/HP/Desktop/python/python_learning/devops/logs"
