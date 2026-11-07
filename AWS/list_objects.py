@@ -2,14 +2,15 @@ import boto3
 
 s3 = boto3.client("s3")
 bucket_name = "1-11-bucket"
-try:
-    def get_object():
+
+def get_object():
+    try:
         response = s3.list_objects_v2(
             Bucket = "python-bucket"
         )
         object_list = response.get("content", [])
-
-        if object_list:
+    
+        if not object_list:
             print(f"Bucket '{bucket_name}' is totally empty")
         else:
             print(f"Bucket '{bucket_name}' objets")
