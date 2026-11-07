@@ -8,7 +8,7 @@ def get_object():
         response = s3.list_objects_v2(
             Bucket = "python-bucket"
         )
-        object_list = response.get("content", [])
+        object_list = response.get("contents", [])
     
         if not object_list:
             print(f"Bucket '{bucket_name}' is totally empty")
