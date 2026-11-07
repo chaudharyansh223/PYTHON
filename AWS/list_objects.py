@@ -18,7 +18,7 @@ def get_object():
             object_name = object["Key"]
             object_size = object["Size"]
             print(f"Naam: {object_name} | Size: {object_size} bytes")
-except Exception:
-    print("unable to connect to aws s3 microservcie", Exception)
+    except Exception:
+        print("unable to connect to aws s3 microservcie", Exception)
 
 get_object()
